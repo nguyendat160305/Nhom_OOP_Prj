@@ -104,7 +104,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new FlatSVGIcon("./img/login.svg"));
+        jLabel1.setIcon(new FlatSVGIcon("./img/1.svg"));
         jPanel2.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.WEST);
@@ -119,8 +119,8 @@ public class Login extends javax.swing.JFrame {
         logo.setFont(new java.awt.Font("Segoe Print", 1, 32)); // NOI18N
         logo.setForeground(new java.awt.Color(0, 183, 183));
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logo-64.png"))); // NOI18N
-        logo.setText("PharmaStore");
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/1.png"))); // NOI18N
+        logo.setText("AnhEmJ6");
         logo.setPreferredSize(new java.awt.Dimension(360, 120));
         jPanel4.add(logo);
 
