@@ -1,6 +1,7 @@
 package gui;
 
 import com.formdev.flatlaf.extras.FlatSVGIcon;
+
 import controller.TaiKhoanController;
 import entities.TaiKhoan;
 import gui.dialog.InfoDialog;
@@ -11,7 +12,6 @@ import gui.page.NhanVienPage;
 import gui.page.PhieuNhapPage;
 import gui.page.ThuocPage;
 import gui.page.TaiKhoanPage;
-import gui.page.thongke.ThongKePage;
 import gui.page.VaiTroPage;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -36,7 +36,6 @@ public class MainLayout extends javax.swing.JFrame {
     private TaiKhoanPage taiKhoan;
     private VaiTroPage vaiTro;
     private PhieuNhapPage phieuNhap;
-    private ThongKePage thongke;
 
     public TaiKhoan tk;
 
@@ -93,7 +92,6 @@ public class MainLayout extends javax.swing.JFrame {
         listItem.add(vaiTroItem);
 
         // Default content
-        mainContent.add(new ThongKePage(tk)).setVisible(true);
 
         // Default selected
         listItem.get(0).setSelected(true);
@@ -194,22 +192,6 @@ public class MainLayout extends javax.swing.JFrame {
         itemPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         itemPanel.setPreferredSize(new java.awt.Dimension(250, 550));
 
-        thongKeItem.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        thongKeItem.setIcon(new FlatSVGIcon("./icon/statistics.svg"));
-        thongKeItem.setText("Biểu đồ");
-        thongKeItem.setBorderPainted(false);
-        thongKeItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        thongKeItem.setFocusPainted(false);
-        thongKeItem.setFocusable(false);
-        thongKeItem.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        thongKeItem.setIconTextGap(16);
-        thongKeItem.setPreferredSize(new java.awt.Dimension(226, 46));
-        thongKeItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                thongKeItemActionPerformed(evt);
-            }
-        });
-        itemPanel.add(thongKeItem);
 
         hoaDonItem.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         hoaDonItem.setIcon(new FlatSVGIcon("./icon/bill.svg"));
@@ -536,13 +518,6 @@ public class MainLayout extends javax.swing.JFrame {
         resetActive();
         phieuNhapItem.setSelected(true);
     }//GEN-LAST:event_phieuNhapItemActionPerformed
-
-    private void thongKeItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeItemActionPerformed
-        thongke = new ThongKePage(tk);
-        this.setPanel(thongke);
-        resetActive();
-        thongKeItem.setSelected(true);
-    }//GEN-LAST:event_thongKeItemActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
