@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Types;
 
 public class JDBCConnection {
 	// PostgreSQL connection details
@@ -21,7 +22,14 @@ public class JDBCConnection {
 		}
 
 		for (int i = 0; i < args.length; i++) {
-			stmt.setObject(i + 1, args[i]);
+			Object arg = args[i];
+			if (arg instanceof java.util.Date) {
+				java.util.Date utilDate = (java.util.Date) arg;
+				java.sql.Timestamp sqlTimestamp = new java.sql.Timestamp(utilDate.getTime());
+				stmt.setObject(i + 1, sqlTimestamp, Types.TIMESTAMP);
+			} else {
+				stmt.setObject(i + 1, arg);
+			}
 		}
 		return stmt;
 	}
