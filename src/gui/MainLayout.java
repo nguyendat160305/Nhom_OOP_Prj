@@ -22,10 +22,7 @@ import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import utils.MessageDialog;
 
-/**
- *
- * @author atuandev
- */
+
 public class MainLayout extends javax.swing.JFrame {
 
     private ThuocPage thuoc;
