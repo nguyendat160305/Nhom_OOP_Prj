@@ -8,9 +8,9 @@ import java.sql.Types;
 
 public class JDBCConnection {
 	// PostgreSQL connection details
-	static String url = "jdbc:postgresql://localhost:5432/QuanLyNhaThuoc";
+	static String url = "jdbc:postgresql://localhost:5432/QLHT";
 	static String user = "postgres";
-	static String password = "admin";
+	static String password = "datcoi23145";
 
 	public static PreparedStatement getStmt(String sql, Object... args) throws Exception {
 		Connection con = DriverManager.getConnection(url, user, password);
